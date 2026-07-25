@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finisher Technologies | Building Tomorrow's Technology</title>
+    <meta name="description" content="Finisher Technologies - Elite digital engineering, enterprise web & mobile development, custom software, cloud architecture, AI automation & cybersecurity.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Animated Cyber Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Top Glow Gradient Overlay -->
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand-logo" onclick="navigateTo('home')">
+                <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="20,15 85,15 70,38 35,38 35,52 75,52 60,75 35,75 35,90 20,90" fill="url(#cyan-grad)" />
+                    <circle cx="82" cy="75" r="8" fill="#00F0FF" class="logo-pulse" />
+                    <defs>
+                        <linearGradient id="cyan-grad" x1="20" y1="15" x2="85" y2="90" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00F0FF" />
+                            <stop offset="0.5" stop-color="#8B5CF6" />
+                            <stop offset="1" stop-color="#00E676" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="brand-text">
+                    <span class="brand-name">FINISHER</span>
+                    <span class="brand-sub">TECHNOLOGIES</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-page="home" onclick="navigateTo('home')">Home</a>
+                <a href="#about" class="nav-link" data-page="about" onclick="navigateTo('about')">About</a>
+                <a href="#services" class="nav-link" data-page="services" onclick="navigateTo('services')">Services</a>
+                <a href="#solutions" class="nav-link" data-page="solutions" onclick="navigateTo('solutions')">Solutions</a>
+                <a href="#portfolio" class="nav-link" data-page="portfolio" onclick="navigateTo('portfolio')">Portfolio</a>
+                <a href="#brandkit" class="nav-link" data-page="brandkit" onclick="navigateTo('brandkit')">Brand Kit</a>
+                <a href="#portal" class="nav-link" data-page="portal" onclick="navigateTo('portal')">Business Portal</a>
+                <a href="#careers" class="nav-link" data-page="careers" onclick="navigateTo('careers')">Careers</a>
+                <a href="#contact" class="nav-link" data-page="contact" onclick="navigateTo('contact')">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-glow" onclick="openQuoteModal()">Get Estimate</button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container (Single-Page View Engine) -->
+    <main id="app-container">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="page-home" class="page-view active">
+            <div class="hero-section">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <div class="badge-pill">
+                            <span class="pill-dot"></span>
+                            <span>FINISHER TECHNOLOGIES ROADMAP • PHASE 1 TO 6 READY</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Building <span class="gradient-text">Tomorrow's</span> Technology Today.
+                        </h1>
+                        <p class="hero-lead">
+                            An elite software engineering and cloud architecture firm. We design, scale, and secure high-impact web apps, mobile solutions, AI systems, and enterprise cloud infrastructure.
+                        </p>
+
+                        <div class="hero-ctas">
+                            <button class="btn btn-primary btn-lg" onclick="navigateTo('services')">
+                                Explore Services
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                            <button class="btn btn-outline btn-lg" onclick="navigateTo('portal')">
+                                Business & Documents Hub
+                            </button>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-num" data-count="99.99">99.99%</span>
+                                <span class="stat-label">System Uptime SLA</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-count="8">8</span>
+                                <span class="stat-label">Core Pillars</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-count="100">100%</span>
+                                <span class="stat-label">Code Ownership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="code-terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <span class="terminal-title">finisher-core.ts — Finisher Engine v3.6</span>
+                            </div>
+                            <div class="terminal-body">
+                                <pre><code><span class="kwd">import</span> { Architect, Scale, Secure } <span class="kwd">from</span> <span class="str">'@finisher/core'</span>;
+
+<span class="kwd">const</span> company = <span class="kwd">new</span> FinisherTechnologies({
+    motto: <span class="str">"Building Tomorrow's Technology"</span>,
+    headquarters: <span class="str">"Nairobi, Kenya"</span>,
+    globalReach: <span class="kwd">true</span>,
+    pillars: [
+        <span class="str">'🌐 Web'</span>, <span class="str">'📱 Mobile'</span>, <span class="str">'💻 Custom Software'</span>,
+        <span class="str">'🗄️ Database'</span>, <span class="str">'☁️ Cloud'</span>, <span class="str">'🤖 AI & Automation'</span>,
+        <span class="str">'🔒 Security'</span>, <span class="str">'🛠️ Advisory'</span>
+    ]
+});
+
+<span class="comment">// Executing mission-critical build...</span>
+<span class="kwd">await</span> company.executeFuture();
+<span class="tag">&lt;Status: 200 OK — Ready to Ship&gt;</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Pillars Quick Preview -->
+            <div class="section-padding bg-darker">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <span class="section-tag">SERVICES PREVIEW</span>
+                        <h2>Engineered For Maximum Scale</h2>
+                        <p class="section-desc">From early-stage MVPs to complex cloud migration, we deliver robust solutions across 8 technical disciplines.</p>
+                    </div>
+
+                    <div class="grid grid-4" id="pillars-preview-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT US PAGE ================= -->
+        <section id="page-about" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header">
+                    <span class="section-tag">ABOUT FINISHER TECHNOLOGIES</span>
+                    <h1>We Finish What Innovation Starts</h1>
+                    <p class="section-desc">Finisher Technologies is a premier tech engineering collective dedicated to building future-proof digital platforms.</p>
+                </div>
+
+                <div class="grid grid-2 glass-card-lg p-4 mb-4">
+                    <div>
+                        <h3 class="gradient-text">Our Vision</h3>
+                        <p>To be Africa's leading technology catalyst, powering the global digital economy with intelligent software, unbreakable infrastructure, and transformative AI systems.</p>
+                    </div>
+                    <div>
+                        <h3 class="gradient-text">Our Mission</h3>
+                        <p>To engineer hyper-efficient, secure, and beautiful technology solutions that accelerate human potential and drive exponential business growth.</p>
+                    </div>
+                </div>
+
+                <h3 class="mb-3 text-center">Our 5 Core Operating Values</h3>
+                <div class="grid grid-3" id="values-grid">
+                    <div class="card value-card">
+                        <div class="value-num">01</div>
+                        <h4>Precision Engineering</h4>
+                        <p>Clean, tested, and scalable architecture designed for zero regression and long-term maintainability.</p>
+                    </div>
+                    <div class="card value-card">
+                        <div class="value-num">02</div>
+                        <h4>Speed & Execution</h4>
+                        <p>Rapid continuous integration and agile delivery without compromising software stability or safety.</p>
+                    </div>
+                    <div class="card value-card">
+                        <div class="value-num">03</div>
+                        <h4>Uncompromising Security</h4>
+                        <p>Zero-trust architecture, threat defense, and end-to-end encryption baked into every single layer.</p>
+                    </div>
+                    <div class="card value-card">
+                        <div class="value-num">04</div>
+                        <h4>Client Partnership</h4>
+                        <p>Transparent communication, shared accountability, and 100% intellectual property transfer to clients.</p>
+                    </div>
+                    <div class="card value-card">
+                        <div class="value-num">05</div>
+                        <h4>Frontier Innovation</h4>
+                        <p>Pioneering modern cloud technologies, edge computing, distributed systems, and practical enterprise AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES PAGE (PHASE 3) ================= -->
+        <section id="page-services" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header text-center">
+                    <span class="section-tag">PHASE 3 — SERVICE CATALOG</span>
+                    <h1>Our 8 Pillars of Technical Excellence</h1>
+                    <p class="section-desc">Comprehensive end-to-end software, infrastructure, and consulting offerings tailored for scaling enterprises.</p>
+                </div>
+
+                <div class="grid grid-2" id="full-services-grid">
+                    <!-- Populated by JS with rich details -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SOLUTIONS PAGE ================= -->
+        <section id="page-solutions" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header text-center">
+                    <span class="section-tag">INDUSTRY VERTICALS</span>
+                    <h1>Tailored Enterprise Solutions</h1>
+                    <p class="section-desc">Custom technical frameworks tailored for key economic sectors.</p>
+                </div>
+
+                <div class="grid grid-3" id="solutions-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PORTFOLIO PAGE ================= -->
+        <section id="page-portfolio" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header text-center">
+                    <span class="section-tag">FEATURED BUILDS</span>
+                    <h1>Engineering Showcase</h1>
+                    <p class="section-desc">A selection of recent platforms, cloud deployments, and enterprise systems delivered by our team.</p>
+                </div>
+
+                <div class="filter-bar text-center mb-4">
+                    <button class="filter-btn active" onclick="filterPortfolio('all')">All Projects</button>
+                    <button class="filter-btn" onclick="filterPortfolio('web')">Web & Cloud</button>
+                    <button class="filter-btn" onclick="filterPortfolio('mobile')">Mobile Apps</button>
+                    <button class="filter-btn" onclick="filterPortfolio('ai')">AI & Data</button>
+                </div>
+
+                <div class="grid grid-3" id="portfolio-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BRAND KIT PAGE (PHASE 1) ================= -->
+        <section id="page-brandkit" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header">
+                    <span class="section-tag">PHASE 1 — BRAND IDENTITY</span>
+                    <h1>Brand Identity & Style Guide</h1>
+                    <p class="section-desc">Explore the official visual design tokens, logo assets, typography rules, and color palette of Finisher Technologies.</p>
+                </div>
+
+                <!-- Logo Section -->
+                <div class="glass-card-lg p-4 mb-4">
+                    <h3>Official Logo Lockups</h3>
+                    <p class="text-muted mb-4">Vector SVG brand marks designed for dark and light background contrast.</p>
+
+                    <div class="grid grid-2">
+                        <div class="logo-box dark-bg">
+                            <span class="box-label">Dark Mode Lockup (Primary)</span>
+                            <div class="logo-display">
+                                <svg class="logo-icon-lg" viewBox="0 0 100 100">
+                                    <polygon points="20,15 85,15 70,38 35,38 35,52 75,52 60,75 35,75 35,90 20,90" fill="url(#cyan-grad)" />
+                                    <circle cx="82" cy="75" r="8" fill="#00F0FF" />
+                                </svg>
+                                <div>
+                                    <div class="brand-name-lg">FINISHER</div>
+                                    <div class="brand-sub-lg">TECHNOLOGIES</div>
+                                </div>
+                            </div>
+                            <span class="motto-tag font-mono">Building Tomorrow's Technology</span>
+                        </div>
+
+                        <div class="logo-box light-bg">
+                            <span class="box-label">Light Mode Lockup</span>
+                            <div class="logo-display">
+                                <svg class="logo-icon-lg" viewBox="0 0 100 100">
+                                    <polygon points="20,15 85,15 70,38 35,38 35,52 75,52 60,75 35,75 35,90 20,90" fill="#0B0F17" />
+                                    <circle cx="82" cy="75" r="8" fill="#7C3AED" />
+                                </svg>
+                                <div>
+                                    <div class="brand-name-lg text-dark">FINISHER</div>
+                                    <div class="brand-sub-lg text-dark">TECHNOLOGIES</div>
+                                </div>
+                            </div>
+                            <span class="motto-tag font-mono text-dark">Building Tomorrow's Technology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color Palette Section -->
+                <div class="glass-card-lg p-4 mb-4">
+                    <h3>Color Palette Tokens (Click to Copy Code)</h3>
+                    <p class="text-muted mb-4">Harmonious cyber-tech palette built with high contrast and accessibility standards.</p>
+
+                    <div class="grid grid-5" id="color-swatches">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Typography Scale -->
+                <div class="glass-card-lg p-4">
+                    <h3>Typography System</h3>
+                    <div class="grid grid-2 gap-3 mt-3">
+                        <div>
+                            <span class="badge">Headings & Titles</span>
+                            <h4 class="font-outfit text-cyan mt-2">Outfit (Sans-Serif)</h4>
+                            <p class="font-outfit text-lg">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                        </div>
+                        <div>
+                            <span class="badge">Body & UI Elements</span>
+                            <h4 class="font-jakarta text-cyan mt-2">Plus Jakarta Sans</h4>
+                            <p class="font-jakarta">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BUSINESS PORTAL PAGE (PHASE 4) ================= -->
+        <section id="page-portal" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header">
+                    <span class="section-tag">PHASE 4 — BUSINESS & LEGAL HUB</span>
+                    <h1>Business Setup & Generator Portal</h1>
+                    <p class="section-desc">Interactive tools to generate legal proposals, tax invoices, view Kenya registration workflows, and review master contracts.</p>
+                </div>
+
+                <!-- Portal Tabs -->
+                <div class="portal-nav mb-4">
+                    <button class="portal-tab active" onclick="switchPortalTab('proposal')">📄 Proposal Generator</button>
+                    <button class="portal-tab" onclick="switchPortalTab('invoice')">🧾 Invoice Generator</button>
+                    <button class="portal-tab" onclick="switchPortalTab('kenya')">🇰🇪 Kenya Setup Guide</button>
+                    <button class="portal-tab" onclick="switchPortalTab('contracts')">⚖️ Master Contracts & SLA</button>
+                    <button class="portal-tab" onclick="switchPortalTab('pricing')">💰 Pricing Packages</button>
+                </div>
+
+                <!-- Tab 1: Proposal Generator -->
+                <div id="tab-proposal" class="portal-pane active glass-card-lg p-4">
+                    <h3>Interactive Project Proposal Generator</h3>
+                    <form id="proposal-form" class="grid grid-2 gap-2 mt-3" onsubmit="generateProposal(event)">
+                        <div class="form-group">
+                            <label>Client Organization Name</label>
+                            <input type="text" id="prop-client" class="form-input" placeholder="e.g. Acme Global Ltd" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Client Contact Email</label>
+                            <input type="email" id="prop-email" class="form-input" placeholder="contact@acme.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Project Title / Scope</label>
+                            <input type="text" id="prop-title" class="form-input" placeholder="e.g. Enterprise Fintech & Mobile PWA" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Estimated Project Budget (USD)</label>
+                            <input type="number" id="prop-budget" class="form-input" placeholder="8500" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary">Generate Proposal Document</button>
+                        </div>
+                    </form>
+                    <div id="proposal-output" class="doc-preview mt-4 hidden"></div>
+                </div>
+
+                <!-- Tab 2: Invoice Generator -->
+                <div id="tab-invoice" class="portal-pane glass-card-lg p-4">
+                    <h3>Interactive Tax Invoice Generator</h3>
+                    <form id="invoice-form" class="grid grid-2 gap-2 mt-3" onsubmit="generateInvoice(event)">
+                        <div class="form-group">
+                            <label>Billed To (Company)</label>
+                            <input type="text" id="inv-client" class="form-input" placeholder="Client Company Ltd" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Client KRA PIN / Tax ID</label>
+                            <input type="text" id="inv-pin" class="form-input" placeholder="A001234567Z" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Invoice Item Description</label>
+                            <input type="text" id="inv-item" class="form-input" placeholder="Phase 1: Cloud Architecture & API Engine" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount (USD)</label>
+                            <input type="number" id="inv-amount" class="form-input" placeholder="4500" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary">Generate Official Invoice</button>
+                        </div>
+                    </form>
+                    <div id="invoice-output" class="doc-preview mt-4 hidden"></div>
+                </div>
+
+                <!-- Tab 3: Kenya Business Setup -->
+                <div id="tab-kenya" class="portal-pane glass-card-lg p-4">
+                    <h3>Kenya Business Registration Roadmap (eCitizen BRS & KRA)</h3>
+                    <p class="text-muted mb-4">Complete compliance timeline for establishing Finisher Technologies Limited in Kenya.</p>
+
+                    <div class="timeline" id="kenya-timeline">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Tab 4: Master Contracts -->
+                <div id="tab-contracts" class="portal-pane glass-card-lg p-4">
+                    <h3>Master Service Agreement (MSA) & NDA Terms</h3>
+                    <div class="doc-view p-3 bg-darker rounded font-mono text-sm" id="contracts-view">
+                        <!-- Contract template preview populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Tab 5: Pricing Packages -->
+                <div id="tab-pricing" class="portal-pane glass-card-lg p-4">
+                    <h3>Standardized Service Packages</h3>
+                    <div class="grid grid-3 mt-3" id="pricing-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CAREERS PAGE (PHASE 6) ================= -->
+        <section id="page-careers" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header text-center">
+                    <span class="section-tag">PHASE 6 — TEAM RECRUITMENT</span>
+                    <h1>Join Finisher Technologies</h1>
+                    <p class="section-desc">We are looking for world-class engineers, architects, and innovators to build the future of software.</p>
+                </div>
+
+                <div class="grid grid-2 gap-4 mb-4">
+                    <div class="glass-card p-4">
+                        <span class="badge">ACADEMY PROGRAMME</span>
+                        <h3 class="mt-2">Graduate Internship Academy</h3>
+                        <p class="text-muted">A 12-week intensive engineering bootcamp for top university graduates focusing on cloud computing, modern React, and AI agent frameworks.</p>
+                        <button class="btn btn-outline btn-sm mt-3" onclick="openApplyModal('Graduate Internship Academy')">Apply for Internship</button>
+                    </div>
+
+                    <div class="glass-card p-4">
+                        <span class="badge">CAREERS</span>
+                        <h3 class="mt-2">Experienced Hires</h3>
+                        <p class="text-muted">Competitive compensation, remote-first flexibility, continuous learning stipends, and cutting-edge enterprise projects.</p>
+                        <button class="btn btn-outline btn-sm mt-3" onclick="openApplyModal('General Engineering Pipeline')">Join Talent Pool</button>
+                    </div>
+                </div>
+
+                <h3 class="mb-3">Open Positions</h3>
+                <div class="grid grid-1 gap-2" id="jobs-list">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT PAGE ================= -->
+        <section id="page-contact" class="page-view">
+            <div class="container section-padding">
+                <div class="section-header text-center">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h1>Start Building With Us</h1>
+                    <p class="section-desc">Have a technical challenge or custom software requirement? Let's talk.</p>
+                </div>
+
+                <div class="grid grid-2 gap-4">
+                    <div class="glass-card p-4">
+                        <h3>Contact Information</h3>
+                        <p class="text-muted mb-4">Reach out directly to our engineering desk or sales team.</p>
+
+                        <div class="info-item mb-3">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <strong>Headquarters</strong>
+                                <p class="text-sm text-muted">Nairobi, Kenya (Global Remote Operations)</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item mb-3">
+                            <div class="info-icon">📧</div>
+                            <div>
+                                <strong>Direct Email</strong>
+                                <p class="text-sm text-muted">contact@finishertechnologies.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item mb-3">
+                            <div class="info-icon">🌐</div>
+                            <div>
+                                <strong>Website & Portal</strong>
+                                <p class="text-sm text-muted">https://finishertechnologies.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4">
+                        <h3>Send Us a Message</h3>
+                        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="mt-3">
+                            <div class="form-group mb-2">
+                                <label>Your Name</label>
+                                <input type="text" class="form-input" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label>Email Address</label>
+                                <input type="email" class="form-input" placeholder="john@company.com" required>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label>Service Interested In</label>
+                                <select class="form-input">
+                                    <option>🌐 Web Development</option>
+                                    <option>📱 Mobile App Development</option>
+                                    <option>💻 Custom Software Development</option>
+                                    <option>🗄️ Database Solutions</option>
+                                    <option>☁️ Cloud Solutions</option>
+                                    <option>🤖 AI & Automation</option>
+                                    <option>🔒 Cybersecurity</option>
+                                    <option>🛠️ IT Support & Consulting</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Project Brief</label>
+                                <textarea class="form-input" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Submit Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= INSTANT ESTIMATOR / QUOTE MODAL ================= -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>⚡ Instant Project Cost & Timeline Estimator</h3>
+                <button class="modal-close" onclick="closeQuoteModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="text-sm text-muted mb-3">Select your desired features to receive a real-time investment estimate.</p>
+                <form id="estimator-form" onchange="calculateEstimate()">
+                    <div class="form-group mb-3">
+                        <label>Primary Service Type</label>
+                        <select id="est-service" class="form-input">
+                            <option value="2500">🌐 Custom Web Application ($2,500 base)</option>
+                            <option value="3500">📱 Mobile App (iOS / Android) ($3,500 base)</option>
+                            <option value="5000">💻 Enterprise Custom Software ($5,000 base)</option>
+                            <option value="4000">☁️ Cloud Infrastructure & DevOps ($4,000 base)</option>
+                            <option value="4500">🤖 AI Agent & Automation ($4,500 base)</option>
+                        </select>
+                    </div>
+
+                    <label class="form-label font-bold mb-2">Additional Modules & Features</label>
+                    <div class="checkbox-group mb-3">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="1200" class="est-feature"> Database & Data Analytics Cluster (+$1,200)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="1500" class="est-feature"> Zero-Trust Cybersecurity Audit & Hardening (+$1,500)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="800" class="est-feature"> Custom Admin & Metrics Dashboard (+$800)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="1000" class="est-feature"> AI Chatbot & Automation Integration (+$1,000)
+                        </label>
+                    </div>
+
+                    <div class="estimate-box">
+                        <div class="estimate-row">
+                            <span>Estimated Total Investment:</span>
+                            <strong class="estimate-price" id="est-total">$2,500</strong>
+                        </div>
+                        <div class="estimate-row text-sm text-muted">
+                            <span>Estimated Timeline:</span>
+                            <span id="est-timeline">3 to 5 Weeks</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeQuoteModal()">Close</button>
+                <button class="btn btn-primary" onclick="submitQuoteRequest()">Request Official Proposal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="brand-logo mb-2">
+                    <span class="brand-name">FINISHER</span>
+                    <span class="brand-sub">TECHNOLOGIES</span>
+                </div>
+                <p class="text-muted text-sm">Building Tomorrow's Technology.</p>
+                <p class="text-xs text-muted mt-2">&copy; 2026 Finisher Technologies Limited. All rights reserved.</p>
+            </div>
+            <div>
+                <h5 class="footer-title">Navigation</h5>
+                <ul class="footer-links">
+                    <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+                    <li><a href="#about" onclick="navigateTo('about')">About Us</a></li>
+                    <li><a href="#services" onclick="navigateTo('services')">Services</a></li>
+                    <li><a href="#portfolio" onclick="navigateTo('portfolio')">Portfolio</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="footer-title">Roadmap & Business</h5>
+                <ul class="footer-links">
+                    <li><a href="#brandkit" onclick="navigateTo('brandkit')">Phase 1: Brand Kit</a></li>
+                    <li><a href="#portal" onclick="navigateTo('portal')">Phase 4: Business Portal</a></li>
+                    <li><a href="#careers" onclick="navigateTo('careers')">Phase 6: Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
