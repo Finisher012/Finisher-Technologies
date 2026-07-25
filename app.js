@@ -119,8 +119,8 @@ const JOBS_DATA = [
 
 const PRICING_PACKAGES = [
     { title: 'Startup MVP', price: '$2,500', desc: 'Ideal for early-stage founders launching scalable web/mobile products with 30-day SLA support.' },
-    { title: 'Business Growth', price: '$5,500', desc: 'Full-stack enterprise application, API integrations, payment gateways, admin dashboard, 60-day SLA.' },
-    { title: 'Enterprise Suite', price: '$12,500+', desc: 'Dedicated microservices engine, high-availability cluster, zero-trust security audit, 24/7 SOC SLA.' }
+    { title: 'Business Growth', desc: 'Full-stack enterprise application, API integrations, payment gateways, admin dashboard, 60-day SLA.' },
+    { title: 'Enterprise Suite',  desc: 'Dedicated microservices engine, high-availability cluster, zero-trust security audit, 24/7 SOC SLA.' }
 ];
 
 // --------------------------------------------------------------------------
@@ -323,7 +323,7 @@ Ref: FT-PROP-2026-${Math.floor(1000 + Math.random() * 9000)}
 ================================================================
 PREPARED FOR: ${client} (${email})
 PROJECT TITLE: ${title}
-TOTAL PROPOSED BUDGET: $${Number(budget).toLocaleString()} USD
+TOTAL PROPOSED BUDGET: $${Number(budget).toLocaleString()}KSH
 
 SCOPE & DELIVERABLES:
 - Phase 1: Architecture, Wireframing & Glassmorphism Design
@@ -354,13 +354,13 @@ BILLED TO: ${client} (KRA PIN: ${pin})
 DATE: ${new Date().toLocaleDateString()}
 
 ITEM: ${item}
-SUBTOTAL: $${amount.toLocaleString()} USD
-VAT (16%): $${vat.toLocaleString()} USD
+SUBTOTAL: $${amount.toLocaleString()} KSH
+VAT (16%): $${vat.toLocaleString()} KSH
 ----------------------------------------------------------------
-TOTAL AMOUNT DUE: $${total.toLocaleString()} USD
+TOTAL AMOUNT DUE: $${total.toLocaleString()} KSH
 
-BANK: NCBA Bank Kenya Plc | Acc No: 771829384910
-PAYBILL: 400200 (Acc: FT-INV)`;
+BANK: KCB Bank Kenya Plc | Acc No: 1337861928
+PAYBILL: 522522 (Acc: FT-INV)`;
 }
 
 // --------------------------------------------------------------------------
