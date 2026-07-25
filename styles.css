@@ -470,6 +470,7 @@ a:hover {
     font-size: 0.85rem;
     line-height: 1.7;
     overflow-x: auto;
+    margin: 50%;
 }
 
 .kwd { color: #F472B6; }
